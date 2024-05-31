@@ -10,4 +10,13 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'angular-core-deep';
+
+
+  onLogoClicked() {
+    console.log("hello");
+  }
+
+  onKeyUp(newTitle: string) {
+    this.title = newTitle;
+  }
 }
