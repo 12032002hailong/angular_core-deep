@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Course } from '../model/course';
 
 @Component({
   selector: 'app-course-card',
@@ -7,6 +8,16 @@ import { Component } from '@angular/core';
   templateUrl: './course-card.component.html',
   styleUrl: './course-card.component.css'
 })
-export class CourseCardComponent {
+export class CourseCardComponent implements OnInit {
 
+  @Input({
+    required: true
+  })
+  course!: Course;
+
+  ngOnInit(): void {
+
+  }
+
+  constructor() { }
 }
