@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CourseCardComponent } from './course-card/course-card.component';
 import { COURSES } from './db-data';
+import { Course } from './model/course';
 
 @Component({
   selector: 'app-root',
@@ -15,5 +16,9 @@ export class AppComponent {
   coreCourse = COURSES[0];
   rxjsCourse = COURSES[1];
   ngrxCourse = COURSES[2];
+
+  onCourseSelected(course: Course) {
+    console.log("app component", course);
+  }
 
 }

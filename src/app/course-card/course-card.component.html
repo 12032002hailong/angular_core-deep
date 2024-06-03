@@ -1,15 +1,11 @@
 <div class="course-card">
   <div class="course-title">{{ course.description }}</div>
-  <img
-    src="https://images.pexels.com/photos/1792149/pexels-photo-1792149.jpeg"
-    alt="asdf"
-    width="300"
-  />
+  <img [src]="course.iconUrl" alt="asdf" width="300" />
   <div class="course-description">
     <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt porro
-      cumque, labore quidem consectetur vel esse eius ab totam provident
-      eligendi alias ducimus, qui quos, earum odio? Deleniti, nostrum aperiam!
+      {{ course.longDescription }}
     </p>
   </div>
+
+  <button (click)="onCourseViewed()">View Course</button>
 </div>
