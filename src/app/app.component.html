@@ -1,16 +1,9 @@
-<h1>{{ coreCourse.description }}</h1>
-
 <div class="courses">
+  @for (course of courses; track course.id) {
   <app-course-card
-    [course]="coreCourse"
+    [course]="course"
     (courseSelected)="onCourseSelected($event)"
   ></app-course-card>
-  <app-course-card
-    [course]="rxjsCourse"
-    (courseSelected)="onCourseSelected($event)"
-  ></app-course-card>
-  <app-course-card
-    [course]="ngrxCourse"
-    (courseSelected)="onCourseSelected($event)"
-  ></app-course-card>
+
+  }
 </div>

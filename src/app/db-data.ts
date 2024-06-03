@@ -33,4 +33,12 @@ export const COURSES: Course[] = [
     category: 'BEGINNER',
     lessonsCount: 10
   },
+  {
+    id: 5,
+    description: "Angular for Developer",
+    iconUrl: 'https://w7.pngwing.com/pngs/419/837/png-transparent-telegram-icon-telegram-logo-computer-icons-telegram-blue-angle-triangle.png',
+    longDescription: 'The meaning of the visual changes based on what you are trying to convey. For instance, the symbolism in an image does nor need to be explained unless you are using the image as an example of symbolic imagery.',
+    category: 'DEVELOPER',
+    lessonsCount: 9
+  },
 ]
