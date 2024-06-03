@@ -1,9 +1,11 @@
 <div class="courses">
-  @for (course of courses; track course.id) {
+  @for (course of courses; track $index; let count = $count) {
   <app-course-card
     [course]="course"
+    [index]="$index"
     (courseSelected)="onCourseSelected($event)"
   ></app-course-card>
-
+  } @empty {
+  <h1>No courses found!</h1>
   }
 </div>

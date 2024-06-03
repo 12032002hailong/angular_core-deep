@@ -10,10 +10,11 @@ import { Course } from '../model/course';
 })
 export class CourseCardComponent implements OnInit {
 
-  @Input({
-    required: true
-  })
+  @Input()
   course!: Course;
+
+  @Input({ required: true })
+  index!: number;
 
   @Output('courseSelected')
   courseSelected = new EventEmitter<Course>();
