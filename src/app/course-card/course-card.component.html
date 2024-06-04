@@ -1,7 +1,7 @@
 <div class="course-card">
   {{ index }}
   <div class="course-title">{{ course.description }}</div>
-  <img [src]="course.iconUrl" alt="asdf" width="300" />
+  <img [src]="course.iconUrl" alt="asdf" width="300" #courseImage />
   <div class="course-description">
     <p>
       {{ course.longDescription }}

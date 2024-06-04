@@ -26,7 +26,6 @@ export class CourseCardComponent implements OnInit {
   constructor() { }
 
   onCourseViewed() {
-    console.log("card component");
     this.courseSelected.emit(this.course)
   }
 }

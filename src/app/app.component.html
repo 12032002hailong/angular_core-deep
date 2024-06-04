@@ -1,6 +1,7 @@
-<div class="courses">
+<div class="courses" #container>
   @for (course of courses; track $index; let count = $count) {
   <app-course-card
+    #cardRef
     [course]="course"
     [index]="$index"
     (courseSelected)="onCourseSelected($event)"
