@@ -4,16 +4,11 @@
     [course]="course"
   >
     <app-course-image [src]="course.iconUrl"> </app-course-image>
-    <app-course-image [src]="courses[1].iconUrl"> </app-course-image>
-    <app-course-image [src]="courses[2].iconUrl"> </app-course-image>
 
     <div class="course-description">
       <p>
         {{ course.longDescription }}
       </p>
     </div>
-
-    Edit Description:
-    <textarea arial-label="text" placeholder="text area"></textarea>
   </app-course-card>
 </div>
