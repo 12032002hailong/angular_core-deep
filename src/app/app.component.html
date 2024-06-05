@@ -1,12 +1,24 @@
-<div class="courses" #container>
-  @for (course of courses; track $index; let count = $count) {
+<div class="courses" *ngIf="courses[0] as course">
   <app-course-card
-    #cardRef
+    (courseSelected)="onCourseSelected($event)"
     [course]="course"
-    [index]="$index"
+  >
+    <div class="course-image">
+      <img [src]="course.iconUrl" alt="asdf" width="300" #courseImage />
+      <h5>total lesson: 5</h5>
+    </div>
+
+    <div class="course-description">
+      <p>
+        {{ course.longDescription }}
+      </p>
+    </div>
+
+    Edit Description: <textarea></textarea>
+  </app-course-card>
+
+  <app-course-card
+    [course]="courses[0]"
     (courseSelected)="onCourseSelected($event)"
   ></app-course-card>
-  } @empty {
-  <h1>No courses found!</h1>
-  }
 </div>
