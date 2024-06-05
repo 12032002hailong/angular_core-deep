@@ -3,10 +3,7 @@
     (courseSelected)="onCourseSelected($event)"
     [course]="course"
   >
-    <div class="course-image">
-      <img [src]="course.iconUrl" alt="asdf" width="300" #courseImage />
-      <h5>total lesson: 5</h5>
-    </div>
+    <app-course-image [src]="course.iconUrl"> </app-course-image>
 
     <div class="course-description">
       <p>
@@ -17,9 +14,4 @@
     Edit Description:
     <textarea arial-label="text" placeholder="text area"></textarea>
   </app-course-card>
-
-  <app-course-card
-    [course]="courses[0]"
-    (courseSelected)="onCourseSelected($event)"
-  ></app-course-card>
 </div>
