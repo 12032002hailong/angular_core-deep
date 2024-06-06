@@ -1,10 +1,26 @@
 <div class="courses" *ngIf="courses[0] as course">
+  <ng-template #blackImage let-courseName="description">
+    <p class="warn">{{ courseName }}</p>
+    <img src="/assets/empty-image.jpg" alt="" />
+  </ng-template>
+
+  <div
+    *ngTemplateOutlet="blackImage; context: { description: course.description }"
+  ></div>
+
+  <hr />
+  <hr />
+
+  <ng-content
+    select=".course-image"
+    *ngIf="course.iconUrl; else blackImage"
+  ></ng-content>
+
   <app-course-card
     (courseSelected)="onCourseSelected($event)"
     [course]="course"
   >
     <app-course-image [src]="course.iconUrl"> </app-course-image>
-
     <div class="course-description">
       <p>
         {{ course.longDescription }}

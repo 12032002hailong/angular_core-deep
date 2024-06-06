@@ -3,13 +3,13 @@ import { RouterOutlet } from '@angular/router';
 import { CourseCardComponent } from './course-card/course-card.component';
 import { COURSES } from './db-data';
 import { Course } from './model/course';
-import { NgIf } from '@angular/common';
+import { NgIf, NgTemplateOutlet } from '@angular/common';
 import { CourseImageComponent } from './course-image/course-image.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CourseCardComponent, NgIf, CourseImageComponent],
+  imports: [RouterOutlet, CourseCardComponent, NgIf, CourseImageComponent, NgTemplateOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
