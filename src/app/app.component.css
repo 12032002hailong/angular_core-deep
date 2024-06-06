@@ -122,3 +122,18 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+.courses {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+  background-color: beige;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+.highlighted {
+  box-shadow: 0 1px 100px 0 rgba(255, 3, 3, 0.3);
+}

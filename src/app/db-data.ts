@@ -1,10 +1,10 @@
 import { Course } from "./model/course";
 
-export const COURSES: any = [
+export const COURSES: Course[] = [
   {
     id: 1,
     description: "Angular Core Deep Dive",
-    // iconUrl: 'https://png.pngtree.com/element_our/png/20181208/list-icon-png_265257.jpg',
+    iconUrl: 'https://png.pngtree.com/element_our/png/20181208/list-icon-png_265257.jpg',
     longDescription: 'If you cannot capture the full significance/value of the visual in 150 characters or less, you will have to provide a long description.',
     category: 'ADVANCED',
     lessonsCount: 10

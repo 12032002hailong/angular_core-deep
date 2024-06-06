@@ -1,13 +1,8 @@
 <div class="courses" *ngIf="courses[0] as course">
-  <ng-template #blackImage let-courseName="description">
-    <p class="warn">{{ courseName }} has no image yet.</p>
-    <img src="/assets/empty-image.jpg" alt="" />
-  </ng-template>
-
   <app-course-card
+    [highlighted]="false"
     (courseSelected)="onCourseSelected($event)"
     [course]="course"
-    [noImageTpl]="blackImage"
   >
     <app-course-image [src]="course.iconUrl"> </app-course-image>
     <div class="course-description">
