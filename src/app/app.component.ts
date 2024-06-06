@@ -20,6 +20,9 @@ export class AppComponent implements AfterViewInit {
 
   courses = [...COURSES];
 
+  @ViewChild(HighlightedDirective, { read: HighlightedDirective })
+  highlighted!: HighlightedDirective
+
   @ViewChildren(CourseCardComponent, { read: ElementRef })
   cards!: QueryList<ElementRef>
 
@@ -32,6 +35,7 @@ export class AppComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
+    console.log(this.highlighted);
 
   }
   onCourseSelected(course: Course) {

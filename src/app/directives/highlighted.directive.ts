@@ -2,7 +2,8 @@ import { Directive, EventEmitter, HostBinding, HostListener, Input, Output } fro
 
 @Directive({
   selector: '[highlighted]',
-  standalone: true
+  standalone: true,
+  exportAs: 'hl'
 })
 export class HighlightedDirective {
 
@@ -45,6 +46,13 @@ export class HighlightedDirective {
   @HostListener('mouseleave')
   mouseLeave() {
     this.isHighLighted = false;
+    this.toggleHighlight.emit(this.isHighLighted)
+
+  }
+
+  toggle() {
+    this.isHighLighted = !this.isHighLighted;
+    this.toggleHighlight.emit(this.isHighLighted)
   }
 
 
