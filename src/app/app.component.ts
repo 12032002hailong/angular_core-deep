@@ -6,12 +6,13 @@ import { Course } from './model/course';
 import { NgIf, NgTemplateOutlet } from '@angular/common';
 import { CourseImageComponent } from './course-image/course-image.component';
 import { HighlightedDirective } from './directives/highlighted.directive';
+import { NgxUnlessDirective } from './directives/ngx-unless.directive';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, CourseCardComponent,
-    NgIf, CourseImageComponent, NgTemplateOutlet,
+    NgIf, CourseImageComponent, NgTemplateOutlet, NgxUnlessDirective,
     HighlightedDirective],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -35,7 +36,6 @@ export class AppComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    console.log(this.highlighted);
 
   }
   onCourseSelected(course: Course) {

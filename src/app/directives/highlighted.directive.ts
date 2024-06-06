@@ -37,18 +37,18 @@ export class HighlightedDirective {
     return "true";
   }
 
-  @HostListener('mouseover', ['$event'])
-  mouseOver() {
-    this.isHighLighted = true;
-    this.toggleHighlight.emit(this.isHighLighted)
-  }
+  // @HostListener('mouseover', ['$event'])
+  // mouseOver() {
+  //   this.isHighLighted = true;
+  //   this.toggleHighlight.emit(this.isHighLighted)
+  // }
 
-  @HostListener('mouseleave')
-  mouseLeave() {
-    this.isHighLighted = false;
-    this.toggleHighlight.emit(this.isHighLighted)
+  // @HostListener('mouseleave')
+  // mouseLeave() {
+  //   this.isHighLighted = false;
+  //   this.toggleHighlight.emit(this.isHighLighted)
 
-  }
+  // }
 
   toggle() {
     this.isHighLighted = !this.isHighLighted;
