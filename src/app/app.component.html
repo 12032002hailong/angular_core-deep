@@ -1,12 +1,18 @@
-<div class="courses" #container>
-  @for (course of courses; track $index; let count = $count) {
+<div class="courses" *ngIf="courses[0] as course">
   <app-course-card
-    #cardRef
-    [course]="course"
-    [index]="$index"
+    [highlighted]="false"
+    #highlighter="hl"
+    (toggleHighlight)="onToggle($event)"
     (courseSelected)="onCourseSelected($event)"
-  ></app-course-card>
-  } @empty {
-  <h1>No courses found!</h1>
-  }
+    [course]="course"
+  >
+    <app-course-image [src]="course.iconUrl" *ngxUnless="!!course.iconUrl">
+    </app-course-image>
+
+    <div class="course-description" (dblclick)="highlighter.toggle()">
+      <p>
+        {{ course.longDescription }}
+      </p>
+    </div>
+  </app-course-card>
 </div>

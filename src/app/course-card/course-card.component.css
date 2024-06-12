@@ -8,21 +8,9 @@
   background-color: beige;
   border-radius: 10px;
   margin: 20px auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 .course-title {
   font-weight: 800;
   font-size: 700;
-}
-
-.course-description {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.course-description p {
-  margin: 0 100px;
 }
